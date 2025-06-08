@@ -27,7 +27,7 @@ const FormComponent = ({ onClose }) => {
 
     try {
       console.log("Submitting form data:", form); 
-      const response = await axios.post("http://localhost:3000/api/user", form);
+      const response = await axios.post("https://a2developer-4qco.onrender.com/api/user", form);
       console.log("Backend response:", response); 
       console.log("Response data:", response.data); 
       if (response && response.data) {
