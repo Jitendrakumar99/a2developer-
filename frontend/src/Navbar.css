@@ -1,0 +1,121 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px; */
+  color: white;
+  position: absolute;
+  top: 61px; 
+  width: 100%;
+  z-index: 1000;
+  /* margin: 10; */
+}
+
+.navbar-left {
+  display: flex;
+  margin-left: 15px;
+  align-items: center;
+}
+
+.book-demo-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.navbar-logo {
+  height: 60px; 
+  margin-right: 10px;
+}
+
+.company-name {
+  font-size: 3em;
+  font-weight: 400;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 25%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.contact-info span {
+  margin-left: 20px;
+}
+
+.contact-info i {
+  margin-right: 5px;
+}
+
+.mobile-menu-btn {
+  display: none; 
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; 
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  
+  .mobile-menu-btn {
+    display: block; 
+  }
+
+  .navbar-right {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+  }
+
+  .navbar-right.active {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+  }
+} 
