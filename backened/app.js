@@ -3,6 +3,7 @@ const mongoose = require("mongoose")
 var path = require('path');
 const userroute = require('./routes/users')
 const cors = require('cors');
+require('dotenv').config();
 var app = express();
 
 // CORS configuration
@@ -18,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use("/api", userroute);
 
 // MongoDB connection with error handling
-mongoose.connect("mongodb://localhost:27017/a2developer", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://jitendrasharma6839:asqxV5qUgm4xqwPu@cluster0.kqbc3.mongodb.net/a2developer", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
